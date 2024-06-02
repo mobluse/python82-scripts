@@ -1,3 +1,4 @@
+# Colors (C) 2024 by Mikael O. Bonnier, Lund, Sweden. License: GPLv3+.
 print("\033[0;H",end="")
 i=32
 for bg in range(16):
