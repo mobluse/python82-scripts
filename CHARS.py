@@ -1,3 +1,4 @@
+# Chars (C) 2024 by Mikael O. Bonnier, Lund, Sweden. License: GPLv3+.
 def c(i,n=0):
   if n==0:
     return chr(i)
