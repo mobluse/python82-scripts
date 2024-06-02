@@ -1,4 +1,4 @@
-# Flappy Bat
+# Flappy Bat (C) 2024 by Mikael O. Bonnier, Lund, Sweden. License: GPLv3+.
 from time import *
 print("\033[8;0mFlappy\033[12;m~\033[8;mBat",end=" "*(22))
 print(end=" "*(9*32))
