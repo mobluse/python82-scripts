@@ -1,3 +1,4 @@
+# Not by me and doesn't work now, but worked with an earlier version of the Python82 App
 from sys import *
 
 def getkey():
