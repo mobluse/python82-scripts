@@ -1,4 +1,5 @@
 # Flappy Bat (C) 2024 by Mikael O. Bonnier, Lund, Sweden. License: GPLv3+.
+# Run using:  python3 -u flappbat_dt.py
 import time
 import random
 
