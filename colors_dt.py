@@ -3,16 +3,16 @@ bgco=fgco[:]
 for i in range(len(bgco)):
   bgco[i]+=10
 
-def move(r,c):
+def at(r,c):
   return "\x1B[%d;%dH"%(r+1,c+1)
 
 def co(fg,bg):
   return "\x1B[%d;%dm"%(fgco[fg],bgco[bg])
 
 def cls():
-  return move(0,0)+"\x1B[2J"
+  return at(0,0)+"\x1B[2J"
 
-def clln():
+def cll():
   return "\x1B[K"
 
 def prco(fg,bg):
@@ -25,13 +25,14 @@ def prco(fg,bg):
   if i>127:
     i=32
 
-print(end="%s%s%s"%(co(0,7),move(0,0),cls()))
+print(end="%s%s"%(co(0,7),cls()))
 i=32
 for bg in range(0,16):
   for fg in range(0,16):
     prco(fg,bg)
+#  if bg%2: print()
 while True:
-  a=input("%s%sEsc code? \\033%s"%(co(0,7),move(8,0),clln()))
+  a=input("%s%sEsc code? \\033%s"%(co(0,7),at(8,0),cll()))
   if a=="-1":
     break
-  print(end="%sX\x1B%s"%(move(5,24),a))
+  print(end="%sX\x1B%s"%(at(5,24),a))
