@@ -1,15 +1,33 @@
 # Colors (C) 2024 by Mikael O. Bonnier, Lund, Sweden. License: GPLv3+.
-print(end="\033[0;H")
+def move(r,c):
+  return "\x1B[%d;%dH"%(r,c)
+
+def co(fg,bg):
+  return "\x1B[%d;%dm"%(fg,bg)
+
+def cls():
+  return "\x1B[2J"
+
+def clln():
+  return "\x1B[K"
+
+def prco(fg,bg):
+  global i
+  c=i
+  if c==127:
+    c=32
+  print(end="%s%c"%(co(fg,bg),c))
+  i+=1
+  if i>127:
+    i=32
+
+print(end="%s%s"%(co(0,7),cls()))
 i=32
-for bg in range(16):
-  for fg in range(16):
-    print(end="\033[%d;%dm%c"%(fg,bg,i))
-    i+=1
-    if i>127:
-      i=32
-a=""
+for bg in range(0,16):
+  for fg in range(0,16):
+    prco(fg,bg)
 while True:
-  a=input("\033[m\033[8;HEsc code? \\033\033[K")
+  a=input("%s%sEsc code? \\033%s"%(co(0,7),move(8,0),clln()))
   if a=="-1":
     break
-  print(end="\033[5;24HX\033%s"%a)
+  print(end="%sX\x1B%s"%(move(5,24),a))
