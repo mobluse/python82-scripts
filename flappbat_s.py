@@ -1,5 +1,5 @@
 # Flappy Bat (C) 2024 by Mikael O. Bonnier, Lund, Sweden. License: GPLv3+.
-# Run using:  python3 -u flappbat_dt.py
+# Run using:  snek flappbat_s.py
 import time
 import random
 
@@ -35,11 +35,11 @@ while True:
   print(end="%sY"%at(int(y),6))
   if m:
     print(end="%s"%at(h,int(x1))+"<")
-  print(end="",flush=True)
+  stdscr.refresh()
   time.sleep(.3)
   if m:
     print(end="\x08 ")
-  print(end="",flush=True)
+  stdscr.refresh()
   a=input("%s %sr=%d  c=%d h=%d moths=%d "%(at(int(y),6),at(9,0),int(10*y),int(10*x1),int(10*h),p))
   ts=t
   t=time.monotonic()
