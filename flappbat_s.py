@@ -8,11 +8,11 @@ bgco=fgco[:]
 for i in range(len(bgco)):
   bgco[i]+=10
 
-def at(r,c):
-  return "\x1B[%d;%dH"%(r+1,c+1)
-
 def co(fg,bg):
   return "\x1B[%d;%dm"%(fgco[fg],bgco[bg])
+
+def at(r,c):
+  return "\x1B[%d;%dH"%(r+1,c+1)
 
 def cls():
   return at(0,0)+"\x1B[2J"
