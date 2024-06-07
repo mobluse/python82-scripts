@@ -1,30 +1,44 @@
 # Flappy Bat (C) 2024 by Mikael O. Bonnier, Lund, Sweden. License: GPLv3+.
-# Flappy Bat
 from time import *
 from random import *
-print("\033[8;mFlappy\033[12;m~\033[8;mBat\033[12;m",end="~"*(22))
+
+def co(fg,bg):
+  return "\x1B[%d;%dm"%(fg,bg)
+
+def at(r,c):
+  return "\x1B[%d;%dH"%(r,c)
+
+def cls():
+  return "\x1B[2J"
+
+def cll():
+  return "\x1B[K"
+
+print("%sFlappy%s~%sBat%s"%(co(8,0),co(12,0),co(8,0),co(12,0)),end="~"*(22))
 print(end=" "*(9*32))
-print("\033[8;12m",end=" "*32)
-print(end="\033[8;m")
+print(co(8,12),end=" "*32)
+print(end=co(8,0))
 y=9
 x1=31
 m=True
 p=0
 t=monotonic()
+seed(t)
 h=randrange(1,9)
+tot=0
 while True:
-  print(end="\033[%d;6HY"%int(y))
+  print(end="%sY"%at(int(y),6))
   if m:
-    print(end="\033[%d;%dH"%(h,int(x1))+chr(130))
+    print(end=at(h,int(x1))+chr(130))
   sleep(.3)
   if m:
     print(end="\b ")
-  a=input("\033[%d;6H \033[9;Hy=%.1f  moths=%d "%(int(y),y,p))
+  a=input("%s %sr=%d  c=%d h=%d moths=%d/%d "%(at(int(y),6),at(9,0),int(10*y),int(10*x1),int(10*h),p,tot))
   ts=t
   t=monotonic()
   dt=(t-ts)
   y-=1-1.5*dt
-  x1-=(t-ts)
+  x1-=dt
   if m and int(x1)==6 and int(y)==h:
     m=False
     p+=1
@@ -32,6 +46,7 @@ while True:
     x1=31
     m=True
     h=randrange(1,9)
+    tot+=1
   if y>10 or y<0:
-    print(end="\033[0;12m\033[10;13HBat hit lava!")
+    print(end="%s%sBat hit lava!"%(co(0,12),at(10,13)))
     break
