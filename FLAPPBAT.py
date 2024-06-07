@@ -1,4 +1,4 @@
-# Flappy Bat (C) 2024 by Mikael O. Bonnier, Lund, Sweden. License: GPLv3+.
+# Flappy Bat (C) 2024 by Mikael O. Bonnier, Lund, Sweden.  License: GPLv3+.
 from time import *
 from random import *
 
@@ -23,7 +23,7 @@ x1=31
 m=True
 p=0
 t=monotonic()
-seed(t)
+seed(int(100000*t))
 h=randrange(1,9)
 tot=0
 while True:
