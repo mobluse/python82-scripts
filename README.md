@@ -1,12 +1,12 @@
 # python82-scripts
 Scripts for the Python82 App in the *TI-82 Advanced Edition Python* graphing calculator. They have been tested with V5.6.3.0017 of the Python82 App. 
 The Python82 programs have uppercase names with a maximum of 8 characters, because that is a limitation in the calculator. For some programs there are also
-versions for CPython (i.e. ordinary Python3) and [https://sneklang.org/doc/snek.html](Snek). They have been tested with Python 3.11.2 and Snek 1.9. 
+versions for CPython (i.e. ordinary Python3) and [Snek](https://sneklang.org/doc/snek.html). They have been tested with Python 3.11.2 and Snek 1.9. 
 The CPython program name ends in _C, and the Snek, ends in _s. Sometimes the same program works in both CPython and Snek and then the name ends with _Cs.
 
 I plan to make a library for each python-type language that contains the differences between the pythons so that the main program can be the same.
 
-In the Python82 App "\x1B[%d;%dm"%(fg,bg) for changing color doesn't follow the standard for ANSI/VT100/xterm escape codes since the color codes 
+In the Python82 App "\x1B[%d;%dm"%(fg,bg) for changing color doesn't follow the standard for [ANSI](https://en.wikipedia.org/wiki/ANSI_escape_code)/[VT100/xterm](https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences) escape codes since the color codes 
 are 0-15 in TI-82 Python, and in the standard they are different and have different codes for foreground and background, respectively, and then 
 you don't need to place them in order, and can change foreground and background independently. I also discovered that "\x1B[%d;%dH"%(row,col) 
 works for positioning the cursor, but that is standard ANSI/VT100/xterm. In Python82 home is at (0, 0), but in the standard, at (1, 1). Also 
