@@ -2,7 +2,6 @@
 # Run using: snek flappbat_s.py
 import time
 import random
-from atco_s import *
 
 print(end=shcu(False))
 print(end="%s%s"%(co(8,0),cls()))
