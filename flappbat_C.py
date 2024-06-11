@@ -4,14 +4,7 @@ import time
 import random
 import curses
 from curses import wrapper
-
-fgco=[30,91,32,93,94,95,96,97,92,37,90,31,33,35,34,36]
-bgco=fgco[:]
-for i in range(len(bgco)):
-  bgco[i]+=10
-
-def co(fg,bg):
-  return "\x1B[%d;%dm"%(fgco[fg],bgco[bg])
+from atco_s import *
 
 def main(stdscr):
   curses.curs_set(False)
