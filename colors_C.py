@@ -1,6 +1,5 @@
 # Colors (C) 2024 by Mikael O. Bonnier, Lund, Sweden. License: GPLv3+.
 # python3 colors_Cs.py
-# snek colors_Cs.py
 from atco_s import *
 
 def prco(fg,bg):
