@@ -13,7 +13,6 @@ def main(stdscr):
   #curses.color_pair(1) | curses.A_BOLD | curses.REVERSE
   curses.init_pair(2,curses.COLOR_YELLOW,curses.COLOR_BLACK)
   curses.init_pair(3,curses.COLOR_BLACK,curses.COLOR_YELLOW)
-  stdscr.addstr(0,0,"%s%s",curses.color_pair(1))
   stdscr.addstr(0,0,"Flappy Bat",curses.color_pair(1))
   stdscr.addstr(0,6,"~",curses.color_pair(2))
   stdscr.addstr(0,10,"~"*(22),curses.color_pair(2))
@@ -41,7 +40,8 @@ def main(stdscr):
     stdscr.addstr(int(y),6," ")
     stdscr.addstr(9,0,s1%(int(10*y),int(10*x1),int(10*h),p,tot))
     stdscr.refresh()
-    a=stdscr.getch()
+    while stdscr.getch()!=10:
+      pass
     ts=t
     t=time.monotonic()
     dt=(t-ts)
