@@ -16,10 +16,10 @@ for i in range(32):
 def pc(j):
   for i in range(256):
     if i in n:
-      print("n",end="")
+      print(end="n")
     elif i in b:
-      print("b",end="")
+      print(end="b")
     else:
-      print(c(i,j),end="")
+      print(end=c(i,j))
 pc(0)
 #pc(1)
