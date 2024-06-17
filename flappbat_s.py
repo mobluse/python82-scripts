@@ -27,10 +27,10 @@ def shcu(on):
     return "\x1B[?25l"
 
 print(end=shcu(False))
-print(end="%s%s"%(co(8,0),cls()))
+print(end=co(8,0)+cls())
 print("%sFlappy%s~%sBat%s"%(co(8,0),co(12,0),co(8,0),co(12,0)),end="~"*(22))
 #print(end=" "*(9*32))
-print("%s%s"%(co(8,12),at(10,0)),end=" "*32)
+print(co(8,12)+at(10,0),end=" "*32)
 print(end=co(8,0))
 y=9
 x1=31
@@ -41,7 +41,7 @@ random.seed(t)
 h=random.randrange(8)+1
 tot=0
 while True:
-  print(end="%sY"%at(int(y),6))
+  print(end=at(int(y),6)+"Y")
   if m:
     print(end=at(h,int(x1))+"<")
   stdscr.refresh()
