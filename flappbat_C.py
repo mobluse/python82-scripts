@@ -10,7 +10,7 @@ def main(stdscr):
   curses.curs_set(False)
   stdscr.nodelay(False)
   curses.init_pair(1, curses.COLOR_WHITE, curses.COLOR_BLACK)
-  #curses.color_pair(1) | curses.A_BOLD | curses.REVERSE
+  # Example: curses.color_pair(1) | curses.A_BOLD | curses.REVERSE
   curses.init_pair(2,curses.COLOR_YELLOW,curses.COLOR_BLACK)
   curses.init_pair(3,curses.COLOR_BLACK,curses.COLOR_YELLOW)
   stdscr.addstr(0,0,"Flappy Bat",curses.color_pair(1))
@@ -64,6 +64,6 @@ def main(stdscr):
   curses.endwin()
   print()
   print(s1%(int(10*y),int(10*x1),int(10*h),p,tot))
-  print("%s%s"%(co(0,12),s2))
+  print(co(0,12)+s2)
 
 wrapper(main)
