@@ -25,5 +25,6 @@ but those that work should work according to the standard (xterm). But if TI doe
 remove them completely, because that would make the calculator less useful. Does Python82 support more escape codes? The program COLORS.py can be used to
 discover working Escape codes and Control codes.
 
-One script, FLAPPBAT.py (i.e. Flappy Bat), is an arcade game where you control the height of a bat using Enter/Entrer several times to eat moths. You need to avoid hitting the lava on the floor and in the ceiling. 
+One script, FLAPPBAT.py (i.e. Flappy Bat), is an arcade game where you flash illuminate a bat and its food and control the height of a bat using Enter/Entrer several times to eat moths. The bat and moth move also when it is dark.
+You need to avoid hitting the lava on the floor and in the ceiling of the cave.
 This game could be improved to have several moths on screen at the same time at different heights.
