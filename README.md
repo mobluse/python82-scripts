@@ -3,7 +3,7 @@ Here are scripts for the Python82 App in the *TI-82 Advanced Edition Python* gra
 The Python82 programs have uppercase names with a maximum of 8 characters, because that is a limitation in the calculator. For some programs there are also
 versions for CPython (i.e. ordinary Python3) and [Snek](https://sneklang.org/doc/snek.html). They have been tested with Python 3.6.9 and 3.11.2 in Linux, and 
 Python 3.12.4 in Windows, and Snek 1.9 in Linux and Windows. The CPython program name ends in _C, and the Snek, ends in _s. In Windows I installed curses for 
-CPython using `pip install windows-curses`. In Windows for the Snek version you need to comment the lines with `stdscr.refresh()`, see flappbat_sw.py.
+CPython using `pip install windows-curses`. In Windows for the Snek version you need to comment the lines with `stdscr.refresh()`, see `flappbat_sw.py`.
 
 I have made a library, AtCo, for each python-type language that contains the differences between the pythons so that the main program can be the same.
 
@@ -26,6 +26,7 @@ but those that work should work according to the standard (xterm). But if TI doe
 remove them completely, because that would make the calculator less useful. Does Python82 support more escape codes? The program COLORS.py can be used to
 discover working Escape codes and Control codes.
 
-One script, FLAPPBAT.py (i.e. Flappy Bat), is an arcade game where you flash illuminate a bat and its food and control the height of a bat using Enter/Entrer several times to eat moths. The bat and moth move also when it is dark.
+One script, FLAPPBAT.py (i.e. Flappy Bat), is an arcade game where you flash illuminate a bat and its food and control the height of a bat using Enter/Entrer
+several times to eat moths. The bat and moth move also when it is dark.
 You need to avoid hitting the lava on the floor and in the ceiling of the cave.
 This game could be improved to have several moths on screen at the same time at different heights.
