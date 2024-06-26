@@ -1,8 +1,9 @@
 # python82-scripts
 Here are scripts for the Python82 App in the *TI-82 Advanced Edition Python* graphing calculator. They have been tested with V5.6.3.0017 of the Python82 App. 
 The Python82 programs have uppercase names with a maximum of 8 characters, because that is a limitation in the calculator. For some programs there are also
-versions for CPython (i.e. ordinary Python3) and [Snek](https://sneklang.org/doc/snek.html). They have been tested with Python 3.6.9, Python 3.11.2, and Snek 1.9. 
-The CPython program name ends in _C, and the Snek, ends in _s. Sometimes the same program works in both CPython and Snek and then the name ends with _Cs.
+versions for CPython (i.e. ordinary Python3) and [Snek](https://sneklang.org/doc/snek.html). They have been tested with Python 3.6.9 and 3.11.2 in Linux, and 
+Python 3.12.4 in Windows, and Snek 1.9 in Linux and Windows. The CPython program name ends in _C, and the Snek, ends in _s. In Windows I installed curses for 
+CPython using `pip install windows-curses`. In Windows for the Snek version you need to comment the lines with `stdscr.refresh()`, see flappbat_sw.py.
 
 I have made a library, AtCo, for each python-type language that contains the differences between the pythons so that the main program can be the same.
 
