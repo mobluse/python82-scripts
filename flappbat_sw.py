@@ -1,5 +1,5 @@
 # Flappy Bat (C) 2024 by Mikael O. Bonnier, Lund, Sweden. License: GPLv3+.
-# Run in Windows using: path-to/snek flappbat_sw.py
+# Run in Windows Command Prompt using: path-to/snek flappbat_sw.py
 import time
 import random
 
