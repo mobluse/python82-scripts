@@ -64,6 +64,6 @@ def main(stdscr):
   curses.endwin()
   print()
   print(s1%(int(10*y),int(10*x1),int(10*h),p,tot))
-  print(co(0,12)+s2)
+  print(co(0,12)+s2+co(9,0))
 
 wrapper(main)
