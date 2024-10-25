@@ -1,7 +1,7 @@
 # Flappy Bat (C) 2024 by Mikael O. Bonnier, Lund, Sweden. License: GPLv3+.
 # Run using: python3 flappbat_C.py
-import time
-import random
+from time import *
+from random import *
 import curses
 from curses import wrapper
 from atco_s import *
@@ -23,9 +23,9 @@ def main(stdscr):
   x1=31
   m=True
   p=0
-  t=time.monotonic()
-  random.seed(t)
-  h=random.randrange(8)+1
+  t=monotonic()
+  seed(t)
+  h=randrange(8)+1
   tot=0
   s1="r=%d  c=%d h=%d moths=%d/%d "
   s2=" Bat hit lava! "
@@ -34,7 +34,7 @@ def main(stdscr):
     if m:
       stdscr.addstr(h,int(x1),"<")
     stdscr.refresh()
-    time.sleep(.3)
+    sleep(.3)
     if m:
       stdscr.addstr(h,int(x1)," ")
     stdscr.addstr(int(y),6," ")
@@ -43,7 +43,7 @@ def main(stdscr):
     while stdscr.getch()!=10:
       pass
     ts=t
-    t=time.monotonic()
+    t=monotonic()
     dt=(t-ts)
     y-=1-1.5*dt
     x1-=dt
@@ -53,7 +53,7 @@ def main(stdscr):
     if x1<0:
       x1=31
       m=True
-      h=random.randrange(8)+1
+      h=randrange(8)+1
       tot+=1
     if y>10 or y<0:
       stdscr.addstr(10,12,s2,curses.color_pair(3))
