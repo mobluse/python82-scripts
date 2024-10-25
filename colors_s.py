@@ -1,5 +1,5 @@
 # Colors (C) 2024 by Mikael O. Bonnier, Lund, Sweden. License: GPLv3+.
-# python3 colors_s.py
+# snek colors_s.py
 
 fgco=[30,91,32,93,94,95,96,97,92,37,90,31,33,35,34,36]
 bgco=fgco[:]
