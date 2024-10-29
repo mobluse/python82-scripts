@@ -1,5 +1,5 @@
 # Flappy Bat (C) 2024 by Mikael O. Bonnier, Lund, Sweden. License: GPLv3+.
-# Run using: snek flappbat_s.py
+# Run using released Snek 1.9: snek flappbat_s.py
 import time
 import random
 
